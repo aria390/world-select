@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.shadow-custom {
+  --tw-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.0562);
+  --tw-shadow-colored: 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shdaow-custum2 {
+  --tw-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.0294);
+  --tw-shadow-colored: 0 0 7px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.anime {
+  transition: background-color 0.5s, color-scheme 0.5s;
+}

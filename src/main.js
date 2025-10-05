@@ -2,6 +2,10 @@ import "./style.css";
 
 const countryEl = document.getElementById("contaner");
 const btnEl = document.getElementById("lightDarkBtn");
+const moonEl = document.getElementById("moon1");
+const moon2El = document.getElementById("moon2");
+const lightEl = document.getElementById("light");
+const darkEl = document.getElementById("dark");
 
 const getCountryEl = async () => {
   const res = await fetch(
@@ -11,7 +15,7 @@ const getCountryEl = async () => {
 
   counries.forEach((country) => {
     countryEl.innerHTML += `
-    <li class="bg-white shdaow-custum2 overflow-hidden rounded-[4px] cursor-pointer flex flex-col gap-[16px] transition-all hover:scale-105">
+    <li class="bg-white shdaow-custum2 overflow-hidden rounded-[4px] cursor-pointer flex flex-col gap-[16px] transition-all hover:scale-105 dark:bg-[#2B3945] dark:text-white">
           <div class="w-[264px] h-[160px] overflow-hidden rounded-[4px]">
             <img class="w-full h-full overflow-hidden rounded-[4px]" src="${country.flags.png}" alt="country-image" />
           </div>
@@ -29,3 +33,13 @@ const getCountryEl = async () => {
 };
 
 getCountryEl();
+
+btnEl.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+  moonEl.classList.toggle("show");
+  moonEl.classList.toggle("hide");
+  moon2El.classList.toggle("hide");
+  lightEl.classList.toggle("show");
+  lightEl.classList.toggle("hide");
+  darkEl.classList.toggle("hide");
+});

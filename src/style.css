@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 .shadow-custom {
   --tw-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.0562);
   --tw-shadow-colored: 0 2px 4px 0 var(--tw-shadow-color);
